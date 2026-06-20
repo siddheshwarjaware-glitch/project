@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Society Maintenance Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Society Maintenance Management System</h1>
+
+        <!-- Maintenance Entry Form -->
+        <div class="form-box">
+            <h2>Add Maintenance Record</h2>
+
+            <div class="form-grid">
+
+                <input type="text" id="flatNo" placeholder="Flat Number">
+
+                <input type="text" id="ownerName" placeholder="Owner Name">
+
+                <input type="number" id="maintenance" placeholder="Maintenance Amount">
+
+                <input type="number" id="paidAmount" placeholder="Paid Amount">
+
+                <input type="date" id="paymentDate">
+
+                <button onclick="addRecord()">Add Record</button>
+
+            </div>
+        </div>
+
+        <!-- Expense Entry Form -->
+        <div class="form-box">
+
+            <h2>Add Society Expense</h2>
+
+            <div class="form-grid">
+
+                <input type="text" id="expenseName" placeholder="Expense Name">
+
+                <input type="number" id="expenseAmount" placeholder="Expense Amount">
+
+                <input type="date" id="expenseDate">
+
+                <button onclick="addExpense()">Add Expense</button>
+
+            </div>
+
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="summary">
+
+            <div class="card">
+                <h3>Total Maintenance</h3>
+                <h2 id="totalMaintenance">₹0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Collected</h3>
+                <h2 id="totalCollected">₹0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Pending</h3>
+                <h2 id="totalPending">₹0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Spent</h3>
+                <h2 id="totalSpent">₹0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Current Balance</h3>
+                <h2 id="currentBalance">₹0</h2>
+            </div>
+
+        </div>
+
+        <!-- Maintenance Table -->
+        <div class="table-box">
+
+            <h2>Maintenance Records</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Flat No</th>
+                        <th>Owner</th>
+                        <th>Maintenance</th>
+                        <th>Paid</th>
+                        <th>Pending</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="recordTable"></tbody>
+
+            </table>
+
+        </div>
+
+        <!-- Expense Table -->
+        <div class="table-box">
+
+            <h2>Expense Records</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Expense</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="expenseTable"></tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
